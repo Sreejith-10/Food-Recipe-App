@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from "react";
 import Loader from "../components/Loader/Loader"
-
-//Context
 export const AllMenuContext = React.createContext();
 
 export default function MenuContext(props) {
@@ -23,7 +21,7 @@ export default function MenuContext(props) {
 
 	return (
 		<AllMenuContext.Provider value={menu}>
-			{!loading ? props.children : null}
+			{!loading ? props.children : <Loader />}
 		</AllMenuContext.Provider>
 	);
 }
