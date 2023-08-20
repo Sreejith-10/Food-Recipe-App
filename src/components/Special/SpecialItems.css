@@ -1,0 +1,48 @@
+
+.special-section{
+    margin-top: 40px;
+}
+.special-h1{
+    text-align: center;
+}
+.special-section-h3{
+    text-align: center;
+    margin: 0;
+}
+
+.special-dishes{
+    margin-top: 20px;
+}
+
+.special-ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.special-li{
+    list-style: none;
+    width: 140px;
+    margin: 35px;
+}
+
+.special-li img{
+    width: 150px;
+    border-radius: 20px;
+}
+
+.special-h3{
+    text-align: start;
+    padding: 0;
+}
+
+
+@media (max-width:430px){
+    .special-section{
+        width: auto;
+    }
+    .special-ul{
+        margin: 0px;
+    }
+}
