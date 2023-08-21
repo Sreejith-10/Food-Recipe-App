@@ -2,6 +2,7 @@ import "./Header.css";
 import {BsMenuButtonWideFill} from "react-icons/bs";
 import {AiOutlineClose} from "react-icons/ai";
 import {useState} from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
 	let [showLinks, setShowLinks] = useState(true);
@@ -34,9 +35,9 @@ export default function Header() {
 					)}
 				</div>
 				<div className='links' id={!showLinks ? "hidden" : ""}>
-					<a>Special</a>
-					<a>Filter</a>
-					<a>Search</a>
+					<a href="">Special</a>
+					<a href="">Filter</a>
+					<a href="">Search</a>
 				</div>
 			</div>
 		</div>

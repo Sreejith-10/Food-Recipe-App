@@ -13,7 +13,6 @@ function App() {
 					<Header />
 				</div>
 				<div className='page-content'>
-					<Main />
 					<Menu />
 				</div>
 				<div className='page-footer'>
