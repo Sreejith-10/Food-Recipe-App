@@ -20,7 +20,6 @@ export default function FavoriteContext(props) {
 		let updatedFav = favorite.filter((val) => {
 			return id != val.id
 		});
-		console.log(updatedFav)
 		setFavorite(updatedFav);
 		setFavState(false);
 	};

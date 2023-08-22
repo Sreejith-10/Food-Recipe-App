@@ -4,7 +4,7 @@ import Pagintaion from "../Pagination/Pagintaion";
 import CardDish from "../CardDish/CardDish";
 import PopUp from "../PopUp/PopUp";
 import {AllMenuContext} from "../../context/MenuContext";
-import { FavoriteDish } from "../../context/FavoriteContext";
+import {FavoriteDish} from "../../context/FavoriteContext";
 
 export default function FilteredDishes(props) {
 	let [dish, setDish] = useState(props.dish);
@@ -24,9 +24,16 @@ export default function FilteredDishes(props) {
 
 	async function filterMenuItems() {
 		const API_URL = "https://www.themealdb.com/api/json/v1/1/categories.php";
-		let catData = await fetch(API_URL);
-		let data = await catData.json();
-		setCat(data.categories);
+		try {
+			fetch(API_URL)
+				.then((data) => data.json())
+				.then((data) => setCat(data.categories));
+		} catch (err) {
+			console.log(err);
+		}
+		// let catData = await fetch(API_URL);
+		// let data = await catData.json();
+		// setCat(data.categories);
 	}
 
 	useEffect(() => {

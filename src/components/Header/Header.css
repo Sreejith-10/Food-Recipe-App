@@ -10,16 +10,16 @@
 	flex: 50%;
 }
 
-.left-side h1{
-    margin-left: 30px;
-    transition: all ease-in 0.4s;
+.left-side h1 {
+	margin-left: 30px;
+	transition: all ease-in 0.4s;
 }
-h1{
-    cursor: pointer;
+h1 {
+	cursor: pointer;
 }
 
-.left-side h1:hover{
-    color: #ef591d;
+.left-side h1:hover {
+	color: #ef591d;
 }
 
 .right-side {
@@ -35,25 +35,36 @@ h1{
 .links a {
 	cursor: pointer;
 	margin-right: 35px;
-    font-size: 1.5rem;
-    transition: all ease-in 0.4s;
+	font-size: 1.5rem;
+	transition: all ease-in 0.4s;
+	text-decoration: none;
 }
 
-.links a:hover{
-    background-color: #ef591d;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
+.links a:hover {
+	background-color: #ef591d;
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
 }
 
 .open {
 	display: none;
-    cursor: pointer;
+	cursor: pointer;
+	transition: all ease-in 0.4s;
 }
 
-.close{
-    display: none;
-    cursor: pointer;
+.open:hover {
+	color: #ef591d;
+}
+
+.close {
+	display: none;
+	cursor: pointer;
+	transition: all ease-in 0.4s;
+}
+
+.close:hover{
+	color: #ef591d;
 }
 
 #hidden {
@@ -66,7 +77,7 @@ h1{
 		width: 80px;
 		height: 30px;
 	}
-    .close {
+	.close {
 		display: flex;
 		width: 80px;
 		height: 30px;
@@ -77,7 +88,7 @@ h1{
 	#hidden {
 		position: absolute;
 		max-height: 200px;
-        height: 300px;
+		height: 300px;
 		right: 0;
 		top: 80px;
 		width: 100%;
@@ -86,6 +97,6 @@ h1{
 		background: #b3b3b3;
 		align-items: center;
 		justify-content: space-evenly;
-        z-index: 99;
+		z-index: 99;
 	}
 }

@@ -6,7 +6,9 @@ import Menu from "./components/Menu/Menu";
 function App() {
 	return (
 		<div className='food-page'>
-			<div className='page-header'></div>
+			<div className='page-header'>
+				<Header />
+			</div>
 			<div className='page-content'>
 				<Menu />
 			</div>

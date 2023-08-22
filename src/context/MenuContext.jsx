@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import Loader from "../components/Loader/Loader"
+import Loader from "../components/Loader/Loader";
 export const AllMenuContext = React.createContext();
 
 export default function MenuContext(props) {

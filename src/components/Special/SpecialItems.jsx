@@ -28,11 +28,10 @@ export default function SpecialItems(props) {
 			return <CardDish val={val} showPopUpHandler={showPopUpHandler} />;
 		}
 	});
-	console.log("This is special", favState);
 
 	return (
 		<section className='special-items'>
-			{showPopUp && <PopUp closePopUp={closePopUp} popUpData={popUpData}/>}
+			{showPopUp && <PopUp closePopUp={closePopUp} popUpData={popUpData} />}
 			<div className='special-section'>
 				<h1 style={{color: "#ef591d"}} className='special-h1'>
 					This is Special Dishes
