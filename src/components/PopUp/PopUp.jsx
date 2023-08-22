@@ -2,33 +2,14 @@
 /* eslint-disable react/prop-types */
 import "./PopUp.css";
 import {AiOutlineClose} from "react-icons/ai";
-import {FaHeart} from "react-icons/fa";
-import {BsHeart} from "react-icons/bs";
-import {FavoriteDish} from "../../context/FavoriteContext";
-import {useContext} from "react";
 
-export default function PopUp({closePopUp, popUpData, checkFav}) {
-	const {addToFavorite, removeFromFavorite, favState} =
-		useContext(FavoriteDish);
-
+export default function PopUp({closePopUp, popUpData}) {
 	return (
 		<div className='popup'>
 			<AiOutlineClose className='popup-close' onClick={closePopUp} />
 			<div className='popup-content'>
 				<div className='popup-dish-img-section'>
 					<img className='popup-dish-img' src={popUpData.strMealThumb} alt='' />
-					{/* <div className='popup-icons'>
-						<BsHeart
-							className='popup-no-fav'
-							onClick={() => {
-								addToFavorite(
-									popUpData.strMeal,
-									popUpData.strMealThumb,
-									popUpData.idMeal
-								);
-							}}
-						/>
-					</div> */}
 					<h3 className='popup-dish-cat'>{popUpData.strCategory}</h3>
 				</div>
 				<div className='popup-dish-description-section'>

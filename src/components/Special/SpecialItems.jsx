@@ -6,16 +6,13 @@ import CardDish from "../CardDish/CardDish";
 import {useContext, useState} from "react";
 import PopUp from "../PopUp/PopUp";
 import {AllMenuContext} from "../../context/MenuContext";
-import Favorite from "../Favorite/Favorite";
-import {FavoriteDish} from "../../context/FavoriteContext";
+
 
 export default function SpecialItems(props) {
 	let [showPopUp, setShowPopUp] = useState(false);
 	let [popUpData, setPopUpData] = useState([]);
 	let limit = 10;
 	const allMenu = useContext(AllMenuContext);
-	const {favorite, addToFavorite, removeFromFavorite, favState, setFavState} =
-		useContext(FavoriteDish);
 	function showPopUpHandler(data) {
 		setShowPopUp(true);
 		setPopUpData(data);

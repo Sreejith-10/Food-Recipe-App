@@ -1,13 +1,12 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
-import React, {useState,useContext} from "react";
+import React, {useState} from "react";
 import "./SearchDish.css";
 import CardDish from "/src/components/CardDish/CardDish";
 import PopUp from "../PopUp/PopUp";
 import Pagintaion from "../Pagination/Pagintaion";
 import Empty from "./Empty";
 import {BsSearch} from "react-icons/bs";
-import { FavoriteDish } from "../../context/FavoriteContext";
 
 export default function SearchDish() {
 	let [key, setKey] = useState();
@@ -16,7 +15,6 @@ export default function SearchDish() {
 	let [dishState, setDishState] = useState(true);
 	let [showPopUp, setShowPopUp] = useState(false);
 	let [popUpData, setPopUpData] = useState();
-	const {favorite, addToFavorite} = useContext(FavoriteDish);
 
 	//Pagination
 
@@ -80,7 +78,7 @@ export default function SearchDish() {
 				</form>
 			</div>
 			<div className='search-result-section'>
-				{showPopUp && <PopUp closePopUp={closePopUp} popUpData={popUpData} addToFavorite={addToFavorite}/>}
+				{showPopUp && <PopUp closePopUp={closePopUp} popUpData={popUpData}/>}
 				<ul className='search-result-ul'>{result}</ul>
 			</div>
 		</section>

@@ -4,7 +4,6 @@ import Pagintaion from "../Pagination/Pagintaion";
 import CardDish from "../CardDish/CardDish";
 import PopUp from "../PopUp/PopUp";
 import {AllMenuContext} from "../../context/MenuContext";
-import {FavoriteDish} from "../../context/FavoriteContext";
 
 export default function FilteredDishes(props) {
 	let [dish, setDish] = useState(props.dish);
@@ -20,7 +19,6 @@ export default function FilteredDishes(props) {
 	let slicedPages = dishFilter.slice(firstIndexofPage, lastIndexofPage);
 	const allMenu = useContext(AllMenuContext);
 	let [cat, setCat] = useState([]);
-	const {favorite, addToFavorite} = useContext(FavoriteDish);
 
 	async function filterMenuItems() {
 		const API_URL = "https://www.themealdb.com/api/json/v1/1/categories.php";
@@ -31,9 +29,6 @@ export default function FilteredDishes(props) {
 		} catch (err) {
 			console.log(err);
 		}
-		// let catData = await fetch(API_URL);
-		// let data = await catData.json();
-		// setCat(data.categories);
 	}
 
 	useEffect(() => {
