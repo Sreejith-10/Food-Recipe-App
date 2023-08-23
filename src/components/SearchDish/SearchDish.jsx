@@ -63,10 +63,10 @@ export default function SearchDish() {
 		<section className='search-section-container'>
 			<div className='search-section'>
 				<h1 className='margin-b main-clr'>Search your food</h1>
-				<h4 className='margin-b'>
+				<h3 className='margin-b'>
 					You can find your dish according to your ingrediant. Find your main
 					ingrediants
-				</h4>
+				</h3>
 				<form action='' onSubmit={saveSearchKeyHandler} className='search-form'>
 					<BsSearch className='search-icon' />
 					<input
@@ -78,7 +78,7 @@ export default function SearchDish() {
 				</form>
 			</div>
 			<div className='search-result-section'>
-				{showPopUp && <PopUp closePopUp={closePopUp} popUpData={popUpData}/>}
+				{showPopUp && <PopUp closePopUp={closePopUp} popUpData={popUpData} />}
 				<ul className='search-result-ul'>{result}</ul>
 			</div>
 		</section>
