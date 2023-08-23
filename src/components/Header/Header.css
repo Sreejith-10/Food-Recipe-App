@@ -98,5 +98,6 @@ h1 {
 		align-items: center;
 		justify-content: space-evenly;
 		z-index: 99;
+		transition: tranform 0.4s ease;
 	}
 }
