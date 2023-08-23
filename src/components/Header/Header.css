@@ -38,6 +38,7 @@ h1 {
 	font-size: 1.5rem;
 	transition: all ease-in 0.4s;
 	text-decoration: none;
+	color: black;
 }
 
 .links a:hover {

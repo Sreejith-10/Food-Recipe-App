@@ -2,6 +2,7 @@ import "./Header.css";
 import {BsMenuButtonWideFill} from "react-icons/bs";
 import {AiOutlineClose} from "react-icons/ai";
 import {useState} from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
 	let [showLinks, setShowLinks] = useState(true);
@@ -18,7 +19,7 @@ export default function Header() {
 	return (
 		<div className='navbar'>
 			<div className='left-side'>
-				<h1>Munchies</h1>
+					<h1>Munchies</h1>
 			</div>
 			<div className='right-side'>
 				<div className='responsive'>
@@ -34,9 +35,9 @@ export default function Header() {
 					)}
 				</div>
 				<div className='links' id={!showLinks ? "hidden" : ""}>
-					<a>Special</a>
-					<a>Filter</a>
-					<a>Search</a>
+					<Link to='/special'>Special</Link>
+					<Link to='/filter'>Filter</Link>
+					<Link to='/search'>Search</Link>
 				</div>
 			</div>
 		</div>
