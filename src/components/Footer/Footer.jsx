@@ -1,5 +1,5 @@
 import "./Footer.css";
-import {FaFacebook, FaInstagram, FaYoutube, FaTwitter} from "react-icons/fa";
+import {FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaCopyright} from "react-icons/fa";
 
 export default function Footer() {
 	return (
@@ -23,7 +23,7 @@ export default function Footer() {
 					<a href="">About</a>
 				</div>
 				<div className="footer-copy">
-					<h1>CopyRight 2023: Develpoed by Sreejith</h1>
+					<h1>CopyRight 2023 {<FaCopyright className="copyright-icon"/>} Develpoed by Sreejith</h1>
 				</div>
 			</div>
 		</footer>

@@ -59,6 +59,7 @@ export default function SearchDish() {
 			return <CardDish val={val} showPopUpHandler={showPopUpHandler} />;
 		})
 	);
+
 	return (
 		<section className='search-section-container'>
 			<div className='search-section'>
